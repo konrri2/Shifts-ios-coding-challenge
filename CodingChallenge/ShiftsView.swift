@@ -16,6 +16,15 @@ struct ShiftsView: View {
                     .padding()
             }
             .navigationTitle("Shifts")
+            .onAppear(perform: loadData)
+        }
+    }
+
+    // TODO: now for testing - add ViewModel later
+    private func loadData() {
+        Task {
+            let res = await try? ApiManager().fetchData()
+            print("loaded")
         }
     }
 }
