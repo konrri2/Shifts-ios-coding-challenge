@@ -10,13 +10,43 @@ import Foundation
 struct Shift: Decodable {
     enum CodingKeys: String, CodingKey {
         case shiftId = "shift_id"
-        case startTime = "start_time"
-        case endTime = "end_time"
+        case start_time
+        case end_time
+        case normalized_start_date_time
+        case normalized_end_date_time
+        case timezone
+        case premiumRate = "premium_rate"
+        case covid
+        case shiftKind = "shift_kind"
+        case withinDistance = "within_distance"
+        case facilityType = "facility_type"
+        case skill
+        case localizedSpecialty = "localized_specialty"
     }
 
-    var shiftId: Int
-    var startTime: String?
-    var endTime: String?
+    private(set) var shiftId: Int
+    private var start_time: String
+    private var end_time: String
+    private var normalized_start_date_time: String
+    private var normalized_end_date_time: String
+    private(set) var timezone: String
+    private(set) var premiumRate: Bool
+    private(set) var covid: Bool
+    private(set) var shiftKind: String
+    private(set) var withinDistance: Int
+    private(set) var facilityType: FacilityType
+    private(set) var skill: Skill
+    private(set) var localizedSpecialty: LocalizedSpecialty
+
+    var startTime: Date? {
+        let formatter = ISO8601DateFormatter()
+        return formatter.date(from: start_time)
+    }
+
+    var endTime: Date? {
+        let formatter = ISO8601DateFormatter()
+        return formatter.date(from: end_time)
+    }
 }
 
 

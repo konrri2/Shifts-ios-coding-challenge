@@ -22,13 +22,6 @@ class ParsingTest: XCTestCase {
         XCTAssertEqual(day.date, "2022-09-23")
     }
 
-    func test_parsing_exampleShift() {
-        let shift = Shift.makeTestInstance()
-        XCTAssertEqual(shift.shiftId, 4075185)
-
-        XCTAssertEqual(shift.startTime, "2022-09-24T04:00:00+00:00")
-    }
-
     func test_parsingShift() {
         let exampleShiftJson = """
 {

@@ -26,10 +26,23 @@ Make api and request builder dynamic for different requests
 
 Cacheing data to show something if there is no internet connection
 
+Fallback in case of corrupted data from API (or data format change)
+
 
 
 ## To discuss:
 
 ### API:
-Time zones eg. `start_time` vs. `normalized_start_date_time` 
+Time zones: I assume date is in Iso8601 format
+also not sure: `start_time` or `normalized_start_date_time` 
+
+I'm guessing eg. `shift_kind` is some enum
+
+### UI/UX:
+
+On main list should we show facility name or localized_specialty name
+
+Color inside "specialty" - where it should be shown
+
+
 

@@ -21,6 +21,10 @@
 		6169346E28DC8BCD00583615 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169346D28DC8BCD00583615 /* URLSession.swift */; };
 		6169347028DC8C9E00583615 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169346F28DC8C9E00583615 /* Errors.swift */; };
 		617FBBB328DCB2E600AD86BF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB228DCB2E600AD86BF /* DetailsView.swift */; };
+		617FBBB528DCBE0200AD86BF /* ShiftModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB428DCBE0200AD86BF /* ShiftModelTests.swift */; };
+		617FBBB728DCC38E00AD86BF /* FacilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB628DCC38E00AD86BF /* FacilityType.swift */; };
+		617FBBB928DCC3F500AD86BF /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB828DCC3F500AD86BF /* Skill.swift */; };
+		617FBBBB28DCC4BC00AD86BF /* LocalizedSpecialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,10 @@
 		6169346D28DC8BCD00583615 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		6169346F28DC8C9E00583615 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		617FBBB228DCB2E600AD86BF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		617FBBB428DCBE0200AD86BF /* ShiftModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftModelTests.swift; sourceTree = "<group>"; };
+		617FBBB628DCC38E00AD86BF /* FacilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityType.swift; sourceTree = "<group>"; };
+		617FBBB828DCC3F500AD86BF /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedSpecialty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			children = (
 				6169346128DC757300583615 /* ApiManagerTests.swift */,
 				6169346A28DC88D000583615 /* ParsingTest.swift */,
+				617FBBB428DCBE0200AD86BF /* ShiftModelTests.swift */,
 				2349FD6E261E4F6A00A1FEAA /* Info.plist */,
 			);
 			path = CodingChallengeTests;
@@ -137,8 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				6169346628DC7A9100583615 /* DayShifts.swift */,
-				6169346828DC7AE300583615 /* Shift.swift */,
 				6169346F28DC8C9E00583615 /* Errors.swift */,
+				617FBBB628DCC38E00AD86BF /* FacilityType.swift */,
+				617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */,
+				6169346828DC7AE300583615 /* Shift.swift */,
+				617FBBB828DCC3F500AD86BF /* Skill.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,10 +275,13 @@
 				617FBBB328DCB2E600AD86BF /* DetailsView.swift in Sources */,
 				6169346428DC78AB00583615 /* ShiftsResponse.swift in Sources */,
 				6169346E28DC8BCD00583615 /* URLSession.swift in Sources */,
+				617FBBB728DCC38E00AD86BF /* FacilityType.swift in Sources */,
 				6169346728DC7A9100583615 /* DayShifts.swift in Sources */,
 				6169346928DC7AE300583615 /* Shift.swift in Sources */,
 				6169345E28DC6A5900583615 /* ApiManager.swift in Sources */,
+				617FBBBB28DCC4BC00AD86BF /* LocalizedSpecialty.swift in Sources */,
 				2349FD5B261E4F6900A1FEAA /* CodingChallengeApp.swift in Sources */,
+				617FBBB928DCC3F500AD86BF /* Skill.swift in Sources */,
 				6169347028DC8C9E00583615 /* Errors.swift in Sources */,
 				6169346028DC6ACE00583615 /* ApiRequestConfiguration.swift in Sources */,
 			);
@@ -276,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617FBBB528DCBE0200AD86BF /* ShiftModelTests.swift in Sources */,
 				6169346228DC757300583615 /* ApiManagerTests.swift in Sources */,
 				6169346B28DC88D000583615 /* ParsingTest.swift in Sources */,
 			);
