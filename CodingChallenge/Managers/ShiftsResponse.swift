@@ -14,7 +14,7 @@ struct ShiftsResponse: Decodable {
 #if DEBUG
 /// Only for testing and preview
 extension ShiftsResponse {
-    internal static func makeTestInstance() -> ShiftsResponse{
+    internal static func makeTestInstance() -> ShiftsResponse {
         let json = """
 {
     "data": [

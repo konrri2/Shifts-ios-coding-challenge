@@ -13,7 +13,6 @@ struct ApiManager {
         let request = Self.buildRequest(for: ApiRequestConfiguration())
         let data = try await URLSession.shared.data(from: request)
         if let result = try? JSONDecoder().decode(ShiftsResponse.self, from: data) {
-            print("====== result.data.count= \(result.data.count)")
             return result.data
         } else {
             print("🛑 Unable parse json")

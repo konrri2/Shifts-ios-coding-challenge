@@ -12,27 +12,34 @@ struct ShiftsView: View {
 
     //"The main view should include a list of shifts. If you tap on a shift it should show a modal shift details view. Be creative and show us your best work."
     var body: some View {
-        VStack {
-            Button("Reload shifts") {
-                Task {
-                    await loadData()
+        NavigationView {
+            VStack {
+                Button("Reload shifts") {
+                    Task {
+                        await loadData()
+                    }
                 }
-            }
 
-            List {
-                ForEach(shiftsByDay, id: \.date) { day in
-                    Section(header: Text(day.date ?? "")) {
-                        ForEach(day.shifts, id: \.shiftId) { shift in
-                            Text("\(shift.shiftId)")
+                List {
+                    ForEach(shiftsByDay, id: \.date) { day in
+                        Section(header: Text(day.date ?? "")) {
+                            ForEach(day.shifts, id: \.shiftId) { shift in
+                                NavigationLink {
+                                    DetailsView(shift: shift)
+                                } label: {
+                                    HStack {
+                                        Text("\(shift.shiftId)")
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
+            .navigationTitle("Shifts")
         }
-        .navigationTitle("Shifts")
     }
 
-    // TODO: now for testing - add ViewModel later
     private func loadData() async {
         if let response = try? await ApiManager().fetchData() {
             self.shiftsByDay = response
