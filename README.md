@@ -37,6 +37,7 @@ Time zones: I assume date is in Iso8601 format
 also not sure: `start_time` or `normalized_start_date_time` 
 
 I'm guessing eg. `shift_kind` is some enum
+and `state_id` can be mapped to state name 
 
 ### UI/UX:
 

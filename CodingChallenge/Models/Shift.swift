@@ -47,6 +47,23 @@ struct Shift: Decodable {
         let formatter = ISO8601DateFormatter()
         return formatter.date(from: end_time)
     }
+
+    // TODO: discuss with backend about API
+    var startHour: String {
+        Self.cutHours(fromNormalizedDateString: normalized_start_date_time)
+    }
+
+    var endHour: String {
+        Self.cutHours(fromNormalizedDateString: normalized_end_date_time)
+    }
+
+    private static func cutHours(fromNormalizedDateString str: String) -> String {
+        if let time = str.split(separator: " ").last {
+            return String(time)
+        } else {
+            return ""
+        }
+    }
 }
 
 

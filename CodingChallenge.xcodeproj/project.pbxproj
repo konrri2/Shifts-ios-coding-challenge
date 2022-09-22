@@ -25,6 +25,7 @@
 		617FBBB728DCC38E00AD86BF /* FacilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB628DCC38E00AD86BF /* FacilityType.swift */; };
 		617FBBB928DCC3F500AD86BF /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBB828DCC3F500AD86BF /* Skill.swift */; };
 		617FBBBB28DCC4BC00AD86BF /* LocalizedSpecialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */; };
+		617FBBBD28DCD00A00AD86BF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FBBBC28DCD00A00AD86BF /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		617FBBB628DCC38E00AD86BF /* FacilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityType.swift; sourceTree = "<group>"; };
 		617FBBB828DCC3F500AD86BF /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedSpecialty.swift; sourceTree = "<group>"; };
+		617FBBBC28DCD00A00AD86BF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,6 @@
 			children = (
 				6169345D28DC6A5900583615 /* ApiManager.swift */,
 				6169345F28DC6ACE00583615 /* ApiRequestConfiguration.swift */,
-				6169346328DC78AB00583615 /* ShiftsResponse.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -150,6 +151,7 @@
 				617FBBB628DCC38E00AD86BF /* FacilityType.swift */,
 				617FBBBA28DCC4BC00AD86BF /* LocalizedSpecialty.swift */,
 				6169346828DC7AE300583615 /* Shift.swift */,
+				6169346328DC78AB00583615 /* ShiftsResponse.swift */,
 				617FBBB828DCC3F500AD86BF /* Skill.swift */,
 			);
 			path = Models;
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6169346D28DC8BCD00583615 /* URLSession.swift */,
+				617FBBBC28DCD00A00AD86BF /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				6169346928DC7AE300583615 /* Shift.swift in Sources */,
 				6169345E28DC6A5900583615 /* ApiManager.swift in Sources */,
 				617FBBBB28DCC4BC00AD86BF /* LocalizedSpecialty.swift in Sources */,
+				617FBBBD28DCD00A00AD86BF /* Color.swift in Sources */,
 				2349FD5B261E4F6900A1FEAA /* CodingChallengeApp.swift in Sources */,
 				617FBBB928DCC3F500AD86BF /* Skill.swift in Sources */,
 				6169347028DC8C9E00583615 /* Errors.swift in Sources */,

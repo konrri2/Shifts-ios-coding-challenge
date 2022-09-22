@@ -27,8 +27,20 @@ struct ShiftsView: View {
                                 NavigationLink {
                                     DetailsView(shift: shift)
                                 } label: {
-                                    HStack {
-                                        Text("\(shift.shiftId)")
+                                    VStack (alignment: .leading){
+                                        // RESOLVE: Decide what to show as title
+                                        HStack {
+                                            Text(shift.localizedSpecialty.abbreviation)
+                                                .font(.title)
+                                            Text(shift.facilityType.name)
+                                                .foregroundColor(Color.secondary)
+                                        }
+                                        HStack {
+                                            // RESOLVE: decide which date (and what format to show)
+                                            Text(shift.startHour)
+                                            Spacer()
+                                            Text(shift.endHour)
+                                        }
                                     }
                                 }
                             }
