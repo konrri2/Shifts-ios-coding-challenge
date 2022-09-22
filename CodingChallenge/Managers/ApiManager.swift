@@ -9,10 +9,16 @@ import Foundation
 
 struct ApiManager {
 
-    public func fetchData() async throws -> ShiftsResponse? {
+    public func fetchData() async throws -> [DayShifts] {
         let request = Self.buildRequest(for: ApiRequestConfiguration())
         let data = try await URLSession.shared.data(from: request)
-        return try JSONDecoder().decode(ShiftsResponse.self, from: data)
+        if let result = try? JSONDecoder().decode(ShiftsResponse.self, from: data) {
+            print("====== result.data.count= \(result.data.count)")
+            return result.data
+        } else {
+            print("🛑 Unable parse json")
+            return []
+        }
     }
 
     private static func buildRequest(for config: ApiRequestConfiguration) -> URLRequest {
